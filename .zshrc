@@ -2,6 +2,11 @@
 
 eval "$(/opt/homebrew/bin/brew shellenv)" # runs brew shellenv which prints a set of export statements and eval executes that output in the current shell
 
+# facilitate nvm functionality
+export NVM_DIR="$HOME/.nvm"
+[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
+[ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"
+
 HISTFILE=~/.zsh_history # where historic commands get saved
 HISTSIZE=10000 # how many hist lines are kept in mem during a session
 SAVEHIST=10000 # how many lines get written to the hist file
