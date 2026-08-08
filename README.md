@@ -25,6 +25,7 @@ My personal macOS terminal setup. Zsh + [Starship](https://starship.rs) prompt, 
    ```bash
    ./install.sh
    ```
+   > If you get a `permission denied` error you will have to make the install script executable first by running `chmod +x install.sh` first, then try again.
 4. Set the Terminal app's font to **Hack Nerd Font** so Starship icons render properly
 5. Restart your terminal
 
