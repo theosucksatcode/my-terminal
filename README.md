@@ -28,6 +28,8 @@ My personal macOS terminal setup. Zsh + [Starship](https://starship.rs) prompt, 
 4. Set the Terminal app's font to **Hack Nerd Font** so Starship icons render properly
 5. Restart your terminal
 
+_You can go the extra mile like I did and download a custom `.terminal` theme which can be dragged into Terminal > Settings > Profiles to accompany Hack Nerd Font also being set. I use Bluloco Dark for my terminal theme._
+
 ## Making changes
 
 Because `.zshrc` and `starship.toml` are symlinked from this repo into your home folder, you can edit them either in `~/.zshrc` directly or in `~/my-terminal/.zshrc`, they're the same file. Just remember to:
