@@ -1,0 +1,43 @@
+# controls how our starship prompt looks
+
+"$schema" = 'https://starship.rs/config-schema.json' # points editors to the schema for file validation and the result of this is working autocomplete
+
+format = """
+[┌](bold green)$directory$git_branch$git_status$nodejs
+[└─](bold green)$character""" # defines the two line prompt shape and which modules show up on it
+
+add_newline = true # adds a blank line before each prompt for readability
+
+[character] # the prompt symbol itself
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+[directory] # current working directory shown in the prompt
+truncation_length = 3 # only show the last 3 folders of the path
+truncate_to_repo = true # if inside a git repo truncate to the repo root instead
+style = "bold cyan"
+
+[git_branch] # shows the current git branch when in a repo
+symbol = " " # icon shown before the branch name
+style = "bold purple"
+format = "on [$symbol$branch]($style) "
+
+[git_status] # shows repo status
+style = "bold red"
+format = '([\[$all_status$ahead_behind\]]($style)) ' # wraps status flags in brackets only shows if theres something to report
+
+[nodejs] # shows node version when in a node project
+symbol = "⬢ " # icon shown before the version
+style = "bold green"
+format = "via [$symbol($version )]($style)"
+
+[cmd_duration] # shows how long the last command took if it was slow
+min_time = 2000 # only show if the command took longer than 2000ms
+format = "took [$duration]($style) "
+style = "bold yellow"
+
+[time] # shows current time in the prompt
+disabled = false
+format = "at [$time]($style) "
+style = "bold dimmed white"
+time_format = "%H:%M" # 24 hour format
