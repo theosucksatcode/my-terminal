@@ -29,7 +29,7 @@ My personal macOS terminal setup. Zsh + [Starship](https://starship.rs) prompt, 
 4. Set the Terminal app's font to **Hack Nerd Font** so Starship icons render properly
 5. Restart your terminal
 
-_You can go the extra mile like I did and download a custom `.terminal` theme which can be dragged into Terminal > Settings > Profiles to accompany Hack Nerd Font also being set. I use Bluloco Dark for my terminal theme._
+**Note!** Hack Nerd Font does not seem to render any Starship icons so if that bothers you try and look for alternative nerd fonts that do actually render icons in the terminal. I decided to keep things consistent with my IDE and utilise SF Mono.
 
 ## Making changes
 
